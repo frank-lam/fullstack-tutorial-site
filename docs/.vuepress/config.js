@@ -85,7 +85,7 @@ module.exports = {
         nav: [
           {
             text: '指南',
-            link: '/guide/'
+            link: '/notes/'
           },
           {
             text: '功能',
@@ -105,7 +105,7 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/guide/': [
+          '/notes/': [
             {
               title: 'Get Start',
               collapsable: false,
@@ -154,7 +154,8 @@ module.exports = {
 
 function genJavaSidebar(type = '') {
   const mapArr = [
-    '/guide/java/01.md',
+    '/notes/java/01.md',
+    '/notes/Linux.md',
   ]
   return mapArr.map(i => {
     return type + i
@@ -164,7 +165,7 @@ function genJavaSidebar(type = '') {
 
 function genEssentialsSidebar(type = '') {
   const mapArr = [
-    '/guide/',
+    '../',
     // '/guide/essentials/layout.md'
   ]
   return mapArr.map(i => {

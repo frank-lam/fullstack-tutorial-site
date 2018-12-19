@@ -3,6 +3,10 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+
+# 配置目录差异化导致的图片显示问题，复制  /notes   到 /.vuepress/public 目录
+cp docs/notes/ docs/.vuepress/public/ -rf
+
 # 生成静态文件
 npm run build
 
