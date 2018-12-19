@@ -134,7 +134,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-CN',
-      description: '后台技术栈/架构师之路，秋招/春招/校招/面试'
+      description: '架构师成长之路'
     },
     '/zh/': {
       lang: 'zh-US',
