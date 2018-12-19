@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:frank-lam/fullstack-tutorial-site.git master:gh-pages
+git push -f "https://${GH_TOKEN}@github.com/frank-lam/fullstack-tutorial-site.git" master:gh-pages
 
 cd -
