@@ -3,7 +3,7 @@ home: true
 heroImage: /home.png
 title: a
 actionText: Get Start
-actionLink: /guide/
+actionLink: /notes/
 features:
   - title: 数据结构与算法
     details: 排序算法、动态规划、递归、回溯法、贪心算法
