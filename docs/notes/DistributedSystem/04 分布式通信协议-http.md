@@ -312,7 +312,7 @@ Content-Type告诉客户端资源的表述形式
 
 http://api.gupaoedu.com 
 
-<http://api/gupaoedu.com/api>
+http://api/gupaoedu.com/api
 
  
 
@@ -340,9 +340,9 @@ http://api.gupaoedu.com/v1/users/{id}
 
 4. 过滤信息
 
-<https://api.github.com/user/repos?page=2&per_page=100>
+https://api.github.com/user/repos?page=2&per_page=100
 
-<https://developer.github.com/v3/#rate-limiting> 
+https://developer.github.com/v3/#rate-limiting
 
 
 

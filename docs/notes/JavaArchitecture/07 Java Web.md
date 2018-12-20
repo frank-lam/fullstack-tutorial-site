@@ -640,10 +640,7 @@ Spring事务管理主要包括3个接口，Spring的事务主要是由它们(**P
 - **优点**：不需要在业务逻辑代码中编写事务相关代码，只需要在配置文件配置或使用注解（@Transaction），这种方式没有侵入性。
 - **缺点**：声明式事务的最细粒度作用于方法上，如果像代码块也有事务需求，只能变通下，将代码块变为方法。
 
-<http://blog.csdn.net/jie_liang/article/details/77600742>
-
-
-
+http://blog.csdn.net/jie_liang/article/details/77600742
 
 
 

@@ -156,6 +156,7 @@ module.exports = {
 function genJavaSidebar(type = '') {
   const mapArr = [
     '/notes/Linux.md',
+    '/notes/SQL.md',
   ]
   return mapArr.map(i => {
     return type + i
