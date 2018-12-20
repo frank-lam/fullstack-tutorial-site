@@ -84,17 +84,17 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         nav: [
           {
-            text: '指南',
+            text: '全栈指南',
             link: '/notes/'
           },
-          {
-            text: '功能',
-            items: genNav(deepClone(ComponentNav), 'ZH')
-          },
-          {
-            text: '生态系统',
-            items: genNav(deepClone(EcosystemNav), 'ZH')
-          },
+          // {
+          //   text: '功能',
+          //   items: genNav(deepClone(ComponentNav), 'ZH')
+          // },
+          // {
+          //   text: '生态系统',
+          //   items: genNav(deepClone(EcosystemNav), 'ZH')
+          // },
           {
             text: '捐赠',
             link: '/donate/'
@@ -152,9 +152,9 @@ module.exports = {
 }
 
 
+// Java核心只是
 function genJavaSidebar(type = '') {
   const mapArr = [
-    '/notes/java/01.md',
     '/notes/Linux.md',
   ]
   return mapArr.map(i => {

@@ -17,4 +17,4 @@ sidebar: false
         from zero to hero.
     </p>
 </div>
-<div align="center"><img src="https://github.com/frank-lam/2019_campus_apply/raw/master/pics/tipping.png" width="620"/></div><br/>
+<div align="center"><img src="https://raw.githubusercontent.com/frank-lam/fullstack-tutorial/master/assets/wechat-fullstack.png" width="620"/></div><br/>
