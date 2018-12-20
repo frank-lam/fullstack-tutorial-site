@@ -97,11 +97,11 @@ module.exports = {
           // },
           {
             text: '捐赠',
-            link: '/donate/'
+            link: '/vuepress/donate/'
           },
           {
             text: '作者',
-            link: '/author/'
+            link: '/vuepress/author/'
           }
         ],
         sidebar: {
@@ -157,6 +157,7 @@ function genJavaSidebar(type = '') {
   const mapArr = [
     '/notes/Linux.md',
     '/notes/SQL.md',
+    '/notes/Docker.md',
   ]
   return mapArr.map(i => {
     return type + i
