@@ -155,7 +155,7 @@ module.exports = {
 // Java核心只是
 function genJavaSidebar(type = '') {
   const mapArr = [
-    '/notes/Linux.md',
+    '/notes/JavaArchitecture/01%20Java%20基础.md',
     '/notes/SQL.md',
     '/notes/Docker.md',
   ]
