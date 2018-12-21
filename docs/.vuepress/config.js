@@ -135,6 +135,12 @@ module.exports = {
       }
     }
   },
+  // markdown: {
+  //   // options for markdown-it-anchor
+  //   // anchor: { permalink: false },
+  //   // options for markdown-it-toc
+  //   toc: { includeLevel: [1, 2] },
+  // },
   locales: {
     '/': {
       lang: 'en-CN',
@@ -155,24 +161,22 @@ module.exports = {
   ga: 'UA-109340118-1'
 }
 
-
 // Java核心只是
 function genJavaSidebar(type = '') {
   const mapArr = [
     '/notes/JavaArchitecture/01%20Java%20基础.md',
     '/notes/JavaArchitecture/02%20Java%20集合框架.md',
     '/notes/JavaArchitecture/03%20Java%20并发编程.md',
-    '/notes/JavaArchitecture/04%20Java%20IO.md',
+    '/notes/JavaArchitecture/04%20Java%20IO.md'
   ]
   return mapArr.map(i => {
     return type + i
   })
 }
 
-
 function genEssentialsSidebar(type = '') {
   const mapArr = [
-    '../',
+    '../'
     // '/guide/essentials/layout.md'
   ]
   return mapArr.map(i => {
@@ -181,9 +185,7 @@ function genEssentialsSidebar(type = '') {
 }
 
 function genAdvancedSidebar(type = '') {
-  const mapArr = [
-    '/guide/advanced/chart.md'
-  ]
+  const mapArr = ['/guide/advanced/chart.md']
   return mapArr.map(i => {
     return type + i
   })
