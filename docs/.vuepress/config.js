@@ -80,12 +80,16 @@ module.exports = {
       },
       '/': {
         label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
+        selectText: '选择/语言',
+        // editLinkText: '在 GitHub 上编辑此页',
         nav: [
           {
             text: '全栈指南',
             link: '/notes/'
+          },
+          {
+            text: '场景实战',
+            link: '/notes/archives/'
           },
           // {
           //   text: '功能',
@@ -117,7 +121,7 @@ module.exports = {
             //   children: genAdvancedSidebar()
             // },
             {
-              title: 'Java 核心概念',
+              title: 'Java 技术栈',
               collapsable: false,
               children: genJavaSidebar()
             }
@@ -156,8 +160,9 @@ module.exports = {
 function genJavaSidebar(type = '') {
   const mapArr = [
     '/notes/JavaArchitecture/01%20Java%20基础.md',
-    '/notes/SQL.md',
-    '/notes/Docker.md',
+    '/notes/JavaArchitecture/02%20Java%20集合框架.md',
+    '/notes/JavaArchitecture/03%20Java%20并发编程.md',
+    '/notes/JavaArchitecture/04%20Java%20IO.md',
   ]
   return mapArr.map(i => {
     return type + i

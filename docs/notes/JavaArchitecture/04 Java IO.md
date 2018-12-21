@@ -1,31 +1,3 @@
-<!-- TOC -->
-
-- [Java IO](#java-io)
-    - [1、磁盘操作（File）](#1磁盘操作file)
-    - [2、字节操作（*Stream）](#2字节操作stream)
-    - [3、字符操作（*Reader | *Writer）](#3字符操作reader--writer)
-    - [4、Java序列化，如何实现序列化和反序列化，常见的序列化协议有哪些？](#4java序列化如何实现序列化和反序列化常见的序列化协议有哪些)
-        - [Java序列化定义](#java序列化定义)
-        - [如何实现序列化和反序列化，底层怎么实现](#如何实现序列化和反序列化底层怎么实现)
-        - [相关注意事项](#相关注意事项)
-        - [常见的序列化协议有哪些](#常见的序列化协议有哪些)
-    - [5、同步和异步](#5同步和异步)
-    - [6、Java中的NIO，BIO，AIO分别是什么](#6java中的niobioaio分别是什么)
-        - [BIO](#bio)
-        - [NIO](#nio)
-        - [AIO (NIO.2)](#aio-nio2)
-        - [总结](#总结)
-    - [7、BIO，NIO，AIO区别](#7bionioaio区别)
-    - [8、Stock通信的伪代码实现流程](#8stock通信的伪代码实现流程)
-    - [9、网络操作](#9网络操作)
-        - [InetAddress](#inetaddress)
-        - [URL](#url)
-        - [Sockets](#sockets)
-        - [Datagram](#datagram)
-        - [什么是Socket？](#什么是socket)
-
-<!-- /TOC -->
-
 # Java IO
 
 Java 的 I/O 大概可以分成以下几类：
@@ -36,8 +8,6 @@ Java 的 I/O 大概可以分成以下几类：
 - 对象操作：Serializable
 - 网络操作：Socket
 - 新的输入/输出：NIO
-
-
 
 ## 1、磁盘操作（File）
 
