@@ -72,7 +72,6 @@ BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStrea
 DataInputStream 装饰者提供了对更多数据类型进行输入的操作，比如 int、double 等基本类型。
 
 
-
 ## 3、字符操作（*Reader | *Writer）
 
 不管是磁盘还是网络传输，最小的存储单元都是字节，而不是字符。**但是在程序中操作的通常是字符形式的数据，因此需要提供对字符进行操作的方法。**
