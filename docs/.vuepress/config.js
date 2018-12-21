@@ -23,10 +23,13 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     sidebarDepth: 3,
-    algolia: {
-      apiKey: 'ffce0083d0830de5f562c045a481410b',
-      indexName: 'vue_element_admin'
-    },
+    lastUpdated: 'Last Updated', // string | boolean
+    // algolia: {
+    //   apiKey: 'ffce0083d0830de5f562c045a481410b',
+    //   indexName: 'vue_element_admin'
+    // },
+    search: true,
+    searchMaxSuggestions: 10,
     locales: {
       '/en': {
         label: 'English',
@@ -124,6 +127,11 @@ module.exports = {
               title: 'Java 技术栈',
               collapsable: false,
               children: genJavaSidebar()
+            },
+            {
+              title: '数据库',
+              collapsable: false,
+              children: genDbSidebar()
             }
           ],
           '/zh/feature/component/': getComponentSidebar(
@@ -144,7 +152,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-CN',
-      description: '架构师成长之路'
+      description: 'from zero to hero'
     },
     '/zh/': {
       lang: 'zh-US',
@@ -161,7 +169,7 @@ module.exports = {
   ga: 'UA-109340118-1'
 }
 
-// Java核心只是
+// Java核心知识
 function genJavaSidebar(type = '') {
   const mapArr = [
     '/notes/JavaArchitecture/01%20Java%20基础.md',
@@ -174,9 +182,17 @@ function genJavaSidebar(type = '') {
   })
 }
 
+// 数据库
+function genDbSidebar(type = '') {
+  const mapArr = ['/notes/MySQL.md', '/notes/SQL.md', '/notes/Redis.md']
+  return mapArr.map(i => {
+    return type + i
+  })
+}
+
 function genEssentialsSidebar(type = '') {
   const mapArr = [
-    '../'
+    '/notes/'
     // '/guide/essentials/layout.md'
   ]
   return mapArr.map(i => {
