@@ -1,4 +1,4 @@
-# Java IO
+# Java I/O
 
 Java 的 I/O 大概可以分成以下几类：
 

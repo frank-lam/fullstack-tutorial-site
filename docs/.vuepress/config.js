@@ -175,7 +175,10 @@ function genJavaSidebar(type = '') {
     '/notes/JavaArchitecture/01%20Java%20基础.md',
     '/notes/JavaArchitecture/02%20Java%20集合框架.md',
     '/notes/JavaArchitecture/03%20Java%20并发编程.md',
-    '/notes/JavaArchitecture/04%20Java%20IO.md'
+    '/notes/JavaArchitecture/04%20Java%20IO.md',
+    '/notes/JavaArchitecture/05%20Java%20虚拟机.md',
+    // '/notes/JavaArchitecture/06%20设计模式.md',
+    '/notes/JavaArchitecture/07%20Java%20Web.md'
   ]
   return mapArr.map(i => {
     return type + i

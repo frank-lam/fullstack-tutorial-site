@@ -1,81 +1,8 @@
-<!-- TOC -->
+# Java Web
 
-- [前言](#前言)
-- [一、Servlet / JSP / Web](#一servlet--jsp--web)
-    - [1. 什么是Servlet](#1-什么是servlet)
-    - [2. Tomcat容器等级](#2-tomcat容器等级)
-    - [3. Servlet执行流程](#3-servlet执行流程)
-        - [浏览器请求](#浏览器请求)
-        - [服务器创建对象](#服务器创建对象)
-        - [调用init方法](#调用init方法)
-        - [调用service方法](#调用service方法)
-        - [向浏览器响应](#向浏览器响应)
-    - [4. Servlet生命周期](#4-servlet生命周期)
-    - [5. Tomcat装载Servlet的三种情况](#5-tomcat装载servlet的三种情况)
-    - [6. forward和redirect](#6-forward和redirect)
-    - [7. Jsp和Servlet的区别](#7-jsp和servlet的区别)
-    - [8. tomcat和Servlet的联系](#8-tomcat和servlet的联系)
-    - [9. cookie和session的区别](#9-cookie和session的区别)
-    - [10. JavaEE中的三层结构和MVC](#10-javaee中的三层结构和mvc)
-    - [11. RESTful 架构](#11-restful-架构)
-        - [什么是REST](#什么是rest)
-        - [什么是RESTful API](#什么是restful-api)
-        - [RESTful 风格](#restful-风格)
-- [二、Spring](#二spring)
-    - [1. Spring IOC、AOP的理解、实现的原理，以及优点](#1-spring-iocaop的理解实现的原理以及优点)
-        - [IOC](#ioc)
-        - [AOP](#aop)
-    - [2. 什么是依赖注入，注入的方式有哪些](#2-什么是依赖注入注入的方式有哪些)
-    - [3. Spring IOC初始化过程](#3-spring-ioc初始化过程)
-    - [4. 项目中Spring AOP用在什么地方，为什么这么用，切点，织入，通知用自己的话描述一下](#4-项目中spring-aop用在什么地方为什么这么用切点织入通知用自己的话描述一下)
-    - [5. AOP动态代理2种实现原理，他们的区别是什么？](#5-aop动态代理2种实现原理他们的区别是什么)
-    - [6. Struts拦截器和Spring AOP区别](#6-struts拦截器和spring-aop区别)
-    - [7. Spring 是如何管理事务的，事务管理机制](#7-spring-是如何管理事务的事务管理机制)
-        - [如何管理的](#如何管理的)
-    - [8. Spring中bean加载机制，生命周期](#8-spring中bean加载机制生命周期)
-        - [加载机制](#加载机制)
-        - [生命周期](#生命周期)
-    - [9. Bean实例化的三种方式](#9-bean实例化的三种方式)
-    - [10. BeanFactory 和 FactoryBean的区别](#10-beanfactory-和-factorybean的区别)
-    - [11. BeanFactory和ApplicationContext的区别](#11-beanfactory和applicationcontext的区别)
-        - [BeanFactory](#beanfactory)
-        - [两者装载bean的区别](#两者装载bean的区别)
-        - [我们该用BeanFactory还是ApplicationContent](#我们该用beanfactory还是applicationcontent)
-        - [ApplicationContext其他特点](#applicationcontext其他特点)
-        - [spring的AOP（常用的是拦截器）](#spring的aop常用的是拦截器)
-        - [spring载入多个上下文](#spring载入多个上下文)
-    - [12. ApplicationContext 上下文的生命周期](#12-applicationcontext-上下文的生命周期)
-    - [13. Spring中autowire和resourse关键字的区别](#13-spring中autowire和resourse关键字的区别)
-    - [14. Spring的注解讲一下，介绍Spring中的熟悉的注解](#14-spring的注解讲一下介绍spring中的熟悉的注解)
-        - [一： 组件类注解](#一-组件类注解)
-        - [二：装配bean时常用的注解](#二装配bean时常用的注解)
-    - [15. Spring 中用到了那些设计模式？](#15-spring-中用到了那些设计模式)
-        - [工厂模式（Factory Method）](#工厂模式factory-method)
-        - [单态模式【单例模式】（Singleton）](#单态模式单例模式singleton)
-        - [适配器（Adapter）](#适配器adapter)
-        - [代理（Proxy）](#代理proxy)
-        - [观察者（Observer）](#观察者observer)
-    - [16. Spring 的优点有哪些](#16-spring-的优点有哪些)
-    - [17. IOC和AOP用到的设计模式](#17-ioc和aop用到的设计模式)
-- [二、SpringMVC](#二springmvc)
-    - [1. Spring MVC的工作原理](#1-spring-mvc的工作原理)
-    - [2. Spring MVC注解的优点](#2-spring-mvc注解的优点)
-- [三、Hibernate](#三hibernate)
-    - [1. 简述Hibernate常见优化策略。](#1-简述hibernate常见优化策略)
-    - [2. Hibernate一级缓存与二级缓存之间的区别](#2-hibernate一级缓存与二级缓存之间的区别)
-    - [3. Hibernate的理解](#3-hibernate的理解)
-- [四、MyBatis](#四mybatis)
-    - [1. Mybatis原理](#1-mybatis原理)
-    - [2. Hibernate了解吗，Mybatis和Hibernate的区别](#2-hibernate了解吗mybatis和hibernate的区别)
-- [五、Tomcat](#五tomcat)
-    - [1. tomcat加载基本流程，涉及到的参数](#1-tomcat加载基本流程涉及到的参数)
-- [附录：参考资料](#附录参考资料)
-
-<!-- /TOC -->
-# 前言
+## 前言
 
 在本文中将总结 Java Web 开发技术和相关框架的核心知识。因框架知识体系比较庞大，具体每个框架的使用我将放在 `../JavaWeb` 这个目录下，包含 Spring、Strust2、Hibernate、Spring Boot 等框架。
-
 
 
 - Spring
@@ -87,12 +14,8 @@
 - Dubbo
 
 
-
 > 在面试指南中将列举面试中常见的考点，包含Servlet、JSP、Spring、中间件等常考Java Web框架知识
 >
-
-
-
 
 
 参考资料：
@@ -103,9 +26,9 @@
 
 
 
-# 一、Servlet / JSP / Web
+## 一、Servlet / JSP / Web
 
-## 1. 什么是Servlet
+### 1. 什么是Servlet
 
 Servlet 是在服务器上运行的小程序。一个 servlet 就是一个 Java 类，并且可以通过 “请求—响应” 编程模式来访问的这个驻留在服务器内存里的 servlet 程序。  
 
@@ -124,7 +47,7 @@ Servlet三种实现方式：
 
 
 
-## 2. Tomcat容器等级
+### 2. Tomcat容器等级
 
 Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Context对应一个Web工程。
 
@@ -133,11 +56,11 @@ Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Co
 
 
 
-## 3. Servlet执行流程
+### 3. Servlet执行流程
 
 主要描述了从浏览器到服务器，再从服务器到浏览器的整个执行过程
 
-### 浏览器请求
+#### 浏览器请求
 
 <div align="center"><img src="assets/20180521175251513.png" width="600"/></div>
 
@@ -147,7 +70,7 @@ Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Co
 ③ 根据映射找到对应的 servlet 名 
 ④ 根据根据 servlet 名找到我们全限定类名，既我们自己写的类
 
-### 服务器创建对象
+#### 服务器创建对象
 
 <div align="center"><img src="assets/20180521182037787.png" width="600"/></div>
 
@@ -155,7 +78,7 @@ Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Co
 
 
 
-### 调用init方法
+#### 调用init方法
 
 <div align="center"><img src="assets/20180521183945631.png" width="600"/></div>
 
@@ -166,7 +89,7 @@ Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Co
 
 
 
-### 调用service方法
+#### 调用service方法
 
 <div align="center"><img src="assets/20180521212619975.png" width="700"/></div>
 
@@ -178,12 +101,12 @@ Tomcat的容器分为4个等级，Servlet的容器管理Context容器，一个Co
 看到这里，你或许有疑问：为什么我们不直接重写service方法？ 
 因为如果重写service方法的话，我们需要将强转，以及一系列的安全保护判断重新写一遍，会存在安全隐患
 
-### 向浏览器响应
+#### 向浏览器响应
 <div align="center"><img src="assets/20180521214423142.png" width="600"/></div>
 
 
 
-## 4. Servlet生命周期
+### 4. Servlet生命周期
 
 - `void init(ServletConfig servletConfig) `：Servlet对象创建之后马上执行的初始化方法，只执行一次；
 - `void service(ServletRequest servletRequest, ServletResponse servletResponse) `：每次处理请求都是在调用这个方法，它会被调用多次；
@@ -222,7 +145,7 @@ Servlet 类由自己编写，但对象由服务器来创建，并由服务器来
 
 
 
-## 5. Tomcat装载Servlet的三种情况
+### 5. Tomcat装载Servlet的三种情况
 
 1. Servlet容器启动时自动装载某些Servlet，实现它只需要在web.xml文件中的 `<servlet></servlet>` 之间添加以下代码：
 
@@ -240,7 +163,7 @@ Servlet 类由自己编写，但对象由服务器来创建，并由服务器来
 
 
 
-## 6. forward和redirect
+### 6. forward和redirect
 
 *本节参考：《Java程序员面试笔试宝典》P172*
 
@@ -274,7 +197,7 @@ filter 使用户可以改变一个 request 并且修改一个 response。filter 
 
 
 
-## 7. Jsp和Servlet的区别
+### 7. Jsp和Servlet的区别
 
 **1、不同之处在哪？**
 
@@ -311,7 +234,7 @@ MVC 模式在 Web 开发中的好处是非常明显，它规避了 JSP 与 Servl
 
 
 
-## 8. tomcat和Servlet的联系
+### 8. tomcat和Servlet的联系
 
 　　Tomcat是Web应用服务器，是一个Servlet/JSP容器。Tomcat 作为 Servlet 容器，负责处理客户请求，把请求传送给Servlet，并将Servlet的响应传送回给客户。而 Servlet 是一种运行在支持 Java 语言的服务器上的组件。Servlet最常见的用途是扩展 Java Web 服务器功能，提供非常安全的，可移植的，易于使用的CGI替代品。
 
@@ -327,7 +250,7 @@ Java Servlet API 是 Servlet 容器(tomcat) 和 servlet 之间的接口，它定
 
  
 
-## 9. cookie和session的区别
+### 9. cookie和session的区别
 
 类似这种面试题，实际上都属于“开放性”问题，你扯到哪里都可以。不过如果我是面试官的话，我还是希望对方能做到一点——不要混淆 session 和 session 实现。
 
@@ -360,7 +283,7 @@ Java Servlet API 是 Servlet 容器(tomcat) 和 servlet 之间的接口，它定
 
 
 
-## 10. JavaEE中的三层结构和MVC
+### 10. JavaEE中的三层结构和MVC
 
 做企业应用开发时，经常采用三层架构分层：表示层、业务层、持久层。表示层负责接收用户请求、转发请求、显示数据等；业务层负责组织业务逻辑；持久层负责持久化业务对象。
 
@@ -391,19 +314,19 @@ MVC 是**客户端**的一种设计模式，所以他天然就不考虑数据如
 
 
 
-## 11. RESTful 架构
+### 11. RESTful 架构
 
-### 什么是REST
+#### 什么是REST
 
 可以总结为一句话：REST 是所有 Web 应用都应该遵守的架构设计指导原则。 
 Representational State Transfer，翻译是”表现层状态转化”。 
 面向资源是 REST 最明显的特征，对于同一个资源的一组不同的操作。资源是服务器上一个可命名的抽象概念，资源是以名词为核心来组织的，首先关注的是名词。REST要求，必须通过统一的接口来对资源执行各种操作。对于每个资源只能执行一组有限的操作。（7个HTTP方法：GET/POST/PUT/DELETE/PATCH/HEAD/OPTIONS）
 
-### 什么是RESTful API
+#### 什么是RESTful API
 
 符合REST架构设计的API。
 
-### RESTful 风格
+#### RESTful 风格
 
 以豆瓣网为例
 
@@ -448,13 +371,13 @@ Representational State Transfer，翻译是”表现层状态转化”。
 
 
 
-# 二、Spring
+## 二、Spring
 
-## 1. Spring IOC、AOP的理解、实现的原理，以及优点 
+### 1. Spring IOC、AOP的理解、实现的原理，以及优点 
 
 Spring的IoC容器是Spring的核心，Spring AOP是spring框架的重要组成部分
 
-### IOC
+#### IOC
 
 - **我的理解**
   - 正常的情况下，比如有一个类，在类里面有方法（不是静态的方法），调用类里面的方法，创建类的对象，使用对象调用方法，创建类对象的过程，需要new出来对象
@@ -477,7 +400,7 @@ Spring的IoC容器是Spring的核心，Spring AOP是spring框架的重要组成�
 
 
 
-### AOP
+#### AOP
 
 - **我的理解**
 
@@ -510,7 +433,7 @@ Spring的IoC容器是Spring的核心，Spring AOP是spring框架的重要组成�
 
 
 
-## 2. 什么是依赖注入，注入的方式有哪些
+### 2. 什么是依赖注入，注入的方式有哪些
 
 - DI（依赖注入）
 
@@ -522,7 +445,7 @@ Spring的IoC容器是Spring的核心，Spring AOP是spring框架的重要组成�
   - 注解注入(@Autowire) 
 
 
-## 3. Spring IOC初始化过程
+### 3. Spring IOC初始化过程
 
  <div align="center"> <img src="../pics/bean-init2.png" width=""/></div><br/>
 
@@ -545,7 +468,7 @@ Spring的IoC容器是Spring的核心，Spring AOP是spring框架的重要组成�
 
 
 
-## 4. 项目中Spring AOP用在什么地方，为什么这么用，切点，织入，通知用自己的话描述一下
+### 4. 项目中Spring AOP用在什么地方，为什么这么用，切点，织入，通知用自己的话描述一下
 
 - **Joinpoint（连接点）（重要）**
   - 类里面可以被增强的方法，这些方法称为连接点
@@ -568,7 +491,7 @@ AOP（Aspect Oriented Programming ）称为面向切面编程，扩展功能不�
 
 
 
-## 5. AOP动态代理2种实现原理，他们的区别是什么？
+### 5. AOP动态代理2种实现原理，他们的区别是什么？
 
 - 动态代理与cglib实现的区别
   - JDK动态代理只能对实现了接口的类生成代理，而不能针对类. 
@@ -580,7 +503,7 @@ AOP（Aspect Oriented Programming ）称为面向切面编程，扩展功能不�
 
 
 
-## 6. Struts拦截器和Spring AOP区别
+### 6. Struts拦截器和Spring AOP区别
 
 
 
@@ -593,7 +516,7 @@ https://www.imooc.com/learn/450
 
 
 
-## 7. Spring 是如何管理事务的，事务管理机制
+### 7. Spring 是如何管理事务的，事务管理机制
 
 事务管理可以帮助我们保证数据的一致性，对应企业的实际应用很重要。
 
@@ -604,7 +527,7 @@ Spring的事务机制包括声明式事务和编程式事务。
 
 **声明式事务管理使用了AOP面向切面编程实现的，本质就是在目标方法执行前后进行拦截。在目标方法执行前加入或创建一个事务，在执行方法执行后，根据实际情况选择提交或是回滚事务**。
 
-### 如何管理的
+#### 如何管理的
 
 Spring事务管理主要包括3个接口，Spring的事务主要是由它们(**PlatformTransactionManager，TransactionDefinition，TransactionStatus**)三个共同完成的。
 
@@ -645,14 +568,14 @@ http://blog.csdn.net/jie_liang/article/details/77600742
 
 
 
-## 8. Spring中bean加载机制，生命周期
+### 8. Spring中bean加载机制，生命周期
 
-### 加载机制
+#### 加载机制
 
 【Spring】详解Spring中Bean的加载 - weknow619 - 博客园
 https://www.cnblogs.com/weknow619/p/6673667.html
 
-### 生命周期
+#### 生命周期
 
 在传统的Java应用中，bean的生命周期很简单。使用Java关键字new进行bean实例化，然后该bean就可以使用了。一旦该bean不再被使用，则由Java自动进行垃圾回收。
 
@@ -687,7 +610,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 
 
-## 9. Bean实例化的三种方式
+### 9. Bean实例化的三种方式
 
 - 使用类的无参构造创建（此种方式用的最多）
 - 使用静态工厂创建对象
@@ -695,7 +618,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 
 
-## 10. BeanFactory 和 FactoryBean的区别
+### 10. BeanFactory 和 FactoryBean的区别
 
 - **BeanFactory**是个Factory，也就是IOC容器或对象工厂，在Spring中，所有的Bean都是由BeanFactory(也就是IOC容器)来进行管理的，提供了实例化对象和拿对象的功能。
 - **FactoryBean**是个Bean，这个Bean不是简单的Bean，而是一个能生产或者修饰对象生成的工厂Bean,它的实现与设计模式中的工厂模式和修饰器模式类似。
@@ -704,18 +627,18 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 
 
-## 11. BeanFactory和ApplicationContext的区别
+### 11. BeanFactory和ApplicationContext的区别
 
-### BeanFactory
+#### BeanFactory
 
 是Spring里面最低层的接口，提供了最简单的容器的功能，只提供了实例化对象和拿对象的功能。
 
-### 两者装载bean的区别
+#### 两者装载bean的区别
 
 - **BeanFactory**：在启动的时候不会去实例化Bean，中有从容器中拿Bean的时候才会去实例化；
 - **ApplicationContext**：在启动的时候就把所有的Bean全部实例化了。它还可以为Bean配置lazy-init=true来让Bean延迟实例化；
 
-### 我们该用BeanFactory还是ApplicationContent
+#### 我们该用BeanFactory还是ApplicationContent
 
 **BeanFactory** 延迟实例化的优点：
 
@@ -731,7 +654,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 缺点：把费时的操作放到系统启动中完成，所有的对象都可以预加载，缺点就是消耗服务器的内存
 
-### ApplicationContext其他特点
+#### ApplicationContext其他特点
 
 除了提供BeanFactory所支持的所有功能外，ApplicationContext还有额外的功能
 
@@ -747,7 +670,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 也可以为bean设置lazy-init属性为true，即Spring容器将不会预先初始化该bean。
 
-### spring的AOP（常用的是拦截器）
+#### spring的AOP（常用的是拦截器）
 
 一般拦截器都是实现HandlerInterceptor，其中有三个方法preHandle、postHandle、afterCompletion
 
@@ -755,7 +678,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 2. postHandle：执行完controller，return modelAndView之前执行，主要操作modelAndView的值
 3. afterCompletion：controller返回后执行
 
-### spring载入多个上下文
+#### spring载入多个上下文
 
 不同项目使用不同分模块策略，spring配置文件分为
 
@@ -769,7 +692,7 @@ https://www.cnblogs.com/weknow619/p/6673667.html
 
 
 
-## 12. ApplicationContext 上下文的生命周期
+### 12. ApplicationContext 上下文的生命周期
 
 PS：可以借鉴Servlet的生命周期，实例化、初始init、接收请求service、销毁destroy;
 
@@ -795,7 +718,7 @@ Spring上下文中的Bean也类似，【Spring上下文的生命周期】
 
 
 
-## 13. Spring中autowire和resourse关键字的区别
+### 13. Spring中autowire和resourse关键字的区别
 
 @Resource和@Autowired都是做bean的注入时使用，其实@Resource并不是Spring的注解，它的包是javax.annotation.Resource，需要导入，但是Spring支持该注解的注入。 
 
@@ -868,13 +791,13 @@ public class TestServiceImpl {
 
 
 
-## 14. Spring的注解讲一下，介绍Spring中的熟悉的注解
+### 14. Spring的注解讲一下，介绍Spring中的熟悉的注解
 
 > 思考：spring怎么知道应该哪些Java类当初bean类处理？ 
 >
 > 答案：使用配置文件或者注解的方式进行标识需要处理的java类! 
 
-### 一： 组件类注解
+#### 一： 组件类注解
 
 @Component ：标准一个普通的spring Bean类。 
 @Repository：标注一个DAO组件类。 
@@ -949,7 +872,7 @@ public class HappyController {
 
 
 
-### 二：装配bean时常用的注解
+#### 二：装配bean时常用的注解
 
 @Autowired：属于Spring 的org.springframework.beans.factory.annotation包下,可用于为类的属性、构造器、方法进行注值 
 @Resource：不属于spring的注解，而是来自于JSR-250位于java.annotation包下，使用该annotation为目标bean指定协作者Bean。 
@@ -966,7 +889,7 @@ public class HappyController {
 
 
 
-## 15. Spring 中用到了那些设计模式？
+### 15. Spring 中用到了那些设计模式？
 
 Spring框架中使用到了大量的设计模式，下面列举了比较有代表性的：
 
@@ -979,7 +902,7 @@ Spring框架中使用到了大量的设计模式，下面列举了比较有代�
 - 观察者– spring 时间驱动模型
 - 回调–Spring ResourceLoaderAware回调接口
 
-### 工厂模式（Factory Method）
+#### 工厂模式（Factory Method）
 
 Spring容器就是实例化和管理Bean的工厂
 
@@ -989,7 +912,7 @@ Spring容器就是实例化和管理Bean的工厂
 
 **Spring通过配置文件，就可以管理所有的bean，而这些bean就是Spring工厂能产生的实例，因此，首先我们在Spring配置文件中对两个实例进行配置**。
 
-### 单态模式【单例模式】（Singleton）
+#### 单态模式【单例模式】（Singleton）
 
 **Spring默认将所有的Bean设置成 单例模式，即对所有的相同id的Bean的请求，都将返回同一个共享的Bean实例。这样就可以大大降低Java创建对象和销毁时的系统开销**。
 
@@ -998,17 +921,17 @@ Spring容器就是实例化和管理Bean的工厂
 | 可以通过singleton=“true | false” 或者 scope=“？”来指定 |
 
 
-### 适配器（Adapter）
+#### 适配器（Adapter）
 
 **在Spring的Aop中，使用的Advice（通知）来增强被代理类的功能。Spring实现这一AOP功能的原理就使用代理模式（1、JDK动态代理。2、CGLib字节码生成技术代理。）对类进行方法级别的切面增强，即，生成被代理类的代理类， 并在代理类的方法前，设置拦截器，通过执行拦截器重的内容增强了代理方法的功能，实现的面向切面编程**。
 
-### 代理（Proxy）
+#### 代理（Proxy）
 
 Spring实现了一种能够通过额外的方法调用完成任务的设计模式 - 代理设计模式,比如JdkDynamicAopProxy和Cglib2AopProxy。
 
 代理设计模式的一个很好的例子是**org.springframework.aop.framework.ProxyFactoryBean**。**该工厂根据Spring bean构建AOP代理。该类实现了定义getObject()方法的FactoryBean接口。此方法用于将需求Bean的实例返回给bean factory**。在这种情况下，它不是返回的实例，而是AOP代理。在执行代理对象的方法之前，可以通过调用补充方法来进一步“修饰”代理对象(其实所谓的静态代理不过是在装饰模式上加了个要不要你来干动作行为而已，而不是装饰模式什么也不做就加了件衣服，其他还得由你来全权完成)。
 
-### 观察者（Observer）
+#### 观察者（Observer）
 
 定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。**spring中Observer模式常用的地方是listener的实现。如ApplicationListener**。
 
@@ -1020,7 +943,7 @@ Spring实现了一种能够通过额外的方法调用完成任务的设计模�
 
 
 
-## 16. Spring 的优点有哪些
+### 16. Spring 的优点有哪些
 
 1. 降低了组件之间的耦合性 ，实现了软件各层之间的解耦 
 2. 可以使用容易提供的众多服务，如事务管理，消息服务等 
@@ -1035,7 +958,7 @@ Spring实现了一种能够通过额外的方法调用完成任务的设计模�
 
 
 
-## 17. IOC和AOP用到的设计模式
+### 17. IOC和AOP用到的设计模式
 
 用过spring的朋友都知道spring的强大和高深，都觉得深不可测，其实当你真正花些时间读一读源码就知道它的一些技术实现其实是建立在一些最基本的技术之上而已；例如AOP(面向方面编程)的实现是建立在CGLib提供的类代理和jdk提供的接口代理，IOC(控制反转)的实现建立在工厂模式、Java反射机制和jdk的操作XML的DOM解析方式.
 
@@ -1043,9 +966,9 @@ Spring实现了一种能够通过额外的方法调用完成任务的设计模�
 
 
 
-# 二、SpringMVC
+## 二、SpringMVC
 
-## 1. Spring MVC的工作原理
+### 1. Spring MVC的工作原理
 
 Spring MVC 的工作原理如下图：  
 
@@ -1096,15 +1019,15 @@ Spring MVC 的工作原理如下图： 
 
 
 
-## 2. Spring MVC注解的优点
+### 2. Spring MVC注解的优点
 
 
 
 
 
-# 三、Hibernate
+## 四、Hibernate
 
-## 1. 简述Hibernate常见优化策略。
+### 1. 简述Hibernate常见优化策略。
 
 - 制定合理的缓存策略（二级缓存、查询缓存）。  
 - 采用合理的Session管理机制。  
@@ -1117,7 +1040,7 @@ Spring MVC 的工作原理如下图： 
 
 
 
-## 2. Hibernate一级缓存与二级缓存之间的区别
+### 2. Hibernate一级缓存与二级缓存之间的区别
 
 - Hibernate的Session提供了一级缓存的功能，默认总是有效的，当应用程序保存持久化实体、修改持久化实体时，Session并不会立即把这种改变提交到数据库，而是缓存在当前的Session中，除非显示调用了Session的flush()方法或通过close()方法关闭Session。通过一级缓存，可以减少程序与数据库的交互，从而提高数据库访问性能。  
 - SessionFactory级别的二级缓存是全局性的，所有的Session可以共享这个二级缓存。不过二级缓存默认是关闭的，需要显示开启并指定需要使用哪种二级缓存实现类（可以使用第三方提供的实现）。一旦开启了二级缓存并设置了需要使用二级缓存的实体类，SessionFactory就会缓存访问过的该实体类的每个对象，除非缓存的数据超出了指定的缓存空间。  
@@ -1125,29 +1048,29 @@ Spring MVC 的工作原理如下图： 
 
 
 
-## 3. Hibernate的理解
+### 3. Hibernate的理解
 
 
 
-# 四、MyBatis
+## 五、MyBatis
 
-## 1. Mybatis原理
+### 1. Mybatis原理
 
-## 2. Hibernate了解吗，Mybatis和Hibernate的区别
-
-
-
-# 五、Tomcat
-
-## 1. tomcat加载基本流程，涉及到的参数
+### 2. Hibernate了解吗，Mybatis和Hibernate的区别
 
 
+
+## 六、Tomcat
+
+### 1. tomcat加载基本流程，涉及到的参数
 
 
 
 
 
-# 附录：参考资料
+
+
+## 附录：参考资料
 
 
 
